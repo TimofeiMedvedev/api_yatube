@@ -6,11 +6,12 @@ class UserSerializer(serializers.ModelSerializer):
     posts = serializers.SlugRelatedField(
         many=True,
         read_only=True,
-        slug_field='posts')
+        slug_field='posts'
+    )
 
     class Meta:
         model = User
-        fields = ('id', 'username', 'posts')
+        fields = '__all__'
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -21,13 +22,13 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ('id', 'text', 'author', 'image', 'group', 'pub_date')
+        fields = '__all__'
 
 
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
-        fields = ('id', 'title', 'slug', 'description')
+        fields = fields = '__all__'
 
 
 class CommentSerializer(serializers.ModelSerializer):
