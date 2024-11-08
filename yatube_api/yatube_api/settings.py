@@ -117,4 +117,4 @@ REST_FRAMEWORK = {
     ]
 }
 
-src_paths = '/api_yatube'
+# src_paths = '/api_yatube'
