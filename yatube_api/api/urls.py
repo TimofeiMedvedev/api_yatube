@@ -10,7 +10,7 @@ router_v1.register('groups', GroupViewSet, basename='groups')
 router_v1.register(
     r'posts/(?P<post_id>\d+)/comments',
     CommentViewSet,
-    basename="comment"
+    basename='comment'
 )
 
 urlpatterns = [
